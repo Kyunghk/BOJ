@@ -1,4 +1,4 @@
-package Conditional_Statement;
+package Bronze;
 
 import java.io.BufferedReader;
 import java.io.IOException;
