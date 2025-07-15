@@ -1,0 +1,25 @@
+package Bronze;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Q4101 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        while (true) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int n = Integer.parseInt(st.nextToken());
+            int m = Integer.parseInt(st.nextToken());
+            if (n > m) {
+                System.out.println("Yes");
+            }else if (n==0&&m==0) {
+                break;
+            }
+            else if (n <= m) {
+                System.out.println("No");
+            }
+        }
+    }
+}
