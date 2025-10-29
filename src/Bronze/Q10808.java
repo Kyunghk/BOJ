@@ -12,13 +12,21 @@ public class Q10808 {
         String s = st.nextToken();
         String[] str = s.split("");
         int[] counts = new int[26];
+
+        // [리팩토링 방식 - 시간 복잡도 최적화 한 줄 처리]
         for (int i = 0; i < str.length; i++) {
-            for (int j = 0; j < 26; j++) {
-                if (str[i].charAt(0) == 97+j) {
-                    counts[j]++;
-                }
-            }
+            counts[str[i].charAt(0) - 'a']++;
         }
+        // [두번째 방식 이중 for문]
+//        for (int i = 0; i < str.length; i++) {
+//            for (int j = 0; j < 26; j++) {
+//                if (str[i].charAt(0) == 97+j) {
+//                    counts[j]++;
+//                }
+//            }
+//        }
+
+        // [처음 방식 중첩 if문]
 //        for (int i = 0; i < str.length; i++) {
 //            if (str[i].equals("a")) {
 //                counts[0]++;
