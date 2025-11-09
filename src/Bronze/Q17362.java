@@ -19,5 +19,8 @@ public class Q17362 {
         }else {
             System.out.println(5);
         }
+
+        int[] pattern = {1, 2, 3, 4, 5, 4, 3, 2};  // 8주기 수열
+        System.out.println(pattern[(int)((n - 1) % 8)]);
     }
 }
