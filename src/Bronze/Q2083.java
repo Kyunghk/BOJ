@@ -1,0 +1,28 @@
+package Bronze;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Q2083 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        while (true) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            String s = st.nextToken();
+            int age = Integer.parseInt(st.nextToken());
+            int weight = Integer.parseInt(st.nextToken());
+            if (s.equals("#") && age == 0 && weight == 0) {
+                break;
+            }
+            System.out.print(s+ " ");
+            if (age > 17 || weight >= 80) {
+                System.out.println("Senior");
+            }else {
+                System.out.println("Junior");
+            }
+        }
+    }
+}
