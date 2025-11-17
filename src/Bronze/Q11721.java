@@ -17,5 +17,11 @@ public class Q11721 {
             }
             System.out.println();
         }
+
+        String s = br.readLine();
+        for (int i = 0; i < s.length(); i += 10) {
+            int end = Math.min(i + 10, s.length());
+            System.out.println(s.substring(i, end));
+        }
     }
 }
