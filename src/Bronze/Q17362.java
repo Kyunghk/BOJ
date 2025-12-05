@@ -1,0 +1,26 @@
+package Bronze;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Q17362 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        long n = Long.parseLong(br.readLine());
+        if (n % 8 == 1) {
+            System.out.println(1);
+        } else if (n % 8 == 2 || n % 8 == 0) {
+            System.out.println(2);
+        }else if (n % 8 == 3 || n % 8 == 7) {
+            System.out.println(3);
+        } else if (n % 8 == 4 || n % 8 == 6) {
+            System.out.println(4);
+        }else {
+            System.out.println(5);
+        }
+
+        int[] pattern = {1, 2, 3, 4, 5, 4, 3, 2};  // 8주기 수열
+        System.out.println(pattern[(int)((n - 1) % 8)]);
+    }
+}
